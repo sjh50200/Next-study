@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  max-width: 365px;
   width: 100%;
+  word-break: break-word;
 `;
 
 export const Image = styled.img`
-  border: 1px solid black;
   width: 100%;
-  max-width: 360px;
-  min-width: 275px;
   height: 200px;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
 `;
 
 export const Category = styled.div`
@@ -22,4 +22,15 @@ export const Category = styled.div`
 
 export const Title = styled.h2`
   word-break: keep-all;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0 0 9.6px;
+`;
+
+export const Excerpt = styled.p`
+  color: #60757e;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0 0 16px;
+  /* font-size: rem; */
 `;
