@@ -1,18 +1,31 @@
-import React from 'react';
+import Link from 'next/link';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import LinkedEl from 'src/components/molecules/LinkedEl';
 import * as S from './style';
 
-const Header = () => {
+interface Props {
+  className: string;
+}
+
+const Header: FunctionComponent<Props> = (props) => {
+  const [isOpen, setOpen] = useState<boolean>(false);
+  const { className } = props;
+
+  useEffect(() => {
+    console.log(isOpen);
+  }, [isOpen]);
+
   return (
-    <S.NavBar>
+    <S.NavBar name={className}>
       <S.Menu>
-        <LinkedEl url={''}>Magazine</LinkedEl>
-        <S.Utils>
+        <Link href="/">Home</Link>
+        <S.Utils className="sns">
           <LinkedEl url={''}>D</LinkedEl>
           <LinkedEl url={''}>I</LinkedEl>
           <LinkedEl url={''}>F</LinkedEl>
           <LinkedEl url={''}>Y</LinkedEl>
         </S.Utils>
+        <S.MenuIcon onClick={() => setOpen(!isOpen)} isOpen={isOpen} />
       </S.Menu>
     </S.NavBar>
   );
