@@ -7,7 +7,6 @@ interface Props {
 }
 
 const Post: FunctionComponent<Props> = ({ post, header }) => {
-  console.log(post);
   return (
     <>
       {header && header}

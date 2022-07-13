@@ -11,10 +11,6 @@ const Header: FunctionComponent<Props> = (props) => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const { className } = props;
 
-  useEffect(() => {
-    console.log(isOpen);
-  }, [isOpen]);
-
   return (
     <S.NavBar name={className}>
       <S.Menu>

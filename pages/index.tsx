@@ -12,7 +12,6 @@ export const getStaticProps = async () => {
     if (post.excerpt && post.excerpt?.length > 100) {
       const shortener = post.excerpt?.substring(0, 100) + '...';
       posts![index].excerpt = shortener;
-      console.log(post.excerpt);
     }
   });
 
@@ -38,6 +37,7 @@ const IndexPage: NextPage<Props> = ({ posts }) => {
       content={
         posts &&
         posts.map((post: PostOrPage) => {
+          console.log(post);
           return post.feature_image ? (
             <Content
               key={post.uuid}
