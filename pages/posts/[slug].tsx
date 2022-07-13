@@ -26,12 +26,10 @@ export const getStaticProps = async (context: any) => {
 export const getStaticPaths = async () => {
   const posts: PostsOrPages | undefined = await getPosts();
 
-  if (posts) {
-    const paths = posts.map((post: PostOrPage) => ({
-      params: { slug: post.slug },
-    }));
-    return { paths, fallback: false };
-  } else return;
+  const paths = posts!.map((post: PostOrPage) => ({
+    params: { slug: post.slug },
+  }));
+  return { paths, fallback: false };
 };
 
 const PostPage: NextPage<Props> = ({ post }) => {
