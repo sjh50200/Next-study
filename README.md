@@ -37,6 +37,10 @@ First, install all dependendcies:
 npm install
 ```
 
+Second, you need your own url and key. you can make it on website "https://ghost.org"
+
+make .env file at your local folder and make environment variable name with GHOST_URL and GHOST_KEY
+
 dev server:
 
 ```bash
