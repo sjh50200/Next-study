@@ -12,7 +12,7 @@ const Home: React.FC<Props> = (props) => {
   return (
     <S.Container>
       {header && header}
-      <S.Banner>Banner Image</S.Banner>
+      {banner && banner}
       <S.ContentGrid>{content && content}</S.ContentGrid>
     </S.Container>
   );

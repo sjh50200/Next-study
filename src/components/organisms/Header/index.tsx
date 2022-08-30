@@ -22,6 +22,7 @@ const Header: FunctionComponent<Props> = (props) => {
           <LinkedEl url={''}>Y</LinkedEl>
         </S.Utils>
         <S.MenuIcon onClick={() => setOpen(!isOpen)} isOpen={isOpen} />
+        {isOpen && <S.Slider />}
       </S.Menu>
     </S.NavBar>
   );

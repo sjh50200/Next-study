@@ -1,19 +1,21 @@
 import { PostOrPage, PostsOrPages } from '@tryghost/content-api';
 import { NextPage } from 'next';
-import React, { useEffect, useState } from 'react';
+// import Image from 'next/image';
+import Banner from 'src/components/molecules/Banner';
+// import Banner from 'src/static/images/banner2.png';
 import Content from 'src/components/organisms/Content';
 import Header from 'src/components/organisms/Header';
 import Home from 'src/components/templates/home';
-import { getPosts } from 'src/utils/api/ghostApi';
+import { getPosts } from 'src/utils/api/posts';
 
 export const getStaticProps = async () => {
   const posts = await getPosts();
-  posts!.forEach((post, index) => {
-    if (post.excerpt && post.excerpt?.length > 100) {
-      const shortener = post.excerpt?.substring(0, 100) + '...';
-      posts![index].excerpt = shortener;
-    }
-  });
+  // posts!.forEach((post, index) => {
+  //   if (post.excerpt && post.excerpt?.length > 100) {
+  //     const shortener = post.excerpt?.substring(0, 100) + '...';
+  //     posts![index].excerpt = shortener;
+  //   }
+  // });
 
   if (!posts) {
     return {
@@ -34,10 +36,17 @@ const IndexPage: NextPage<Props> = ({ posts }) => {
   return (
     <Home
       header={<Header className="on-off" />}
+      banner={
+        <Banner />
+        // <Image
+        //   src={Banner}
+        //   alt="cobe's blog banner image"
+        //   style={{ objectFit: 'contain', width: '100%' }}
+        // />
+      }
       content={
         posts &&
         posts.map((post: PostOrPage) => {
-          console.log(post);
           return post.feature_image ? (
             <Content
               key={post.uuid}
@@ -59,31 +68,5 @@ const IndexPage: NextPage<Props> = ({ posts }) => {
     />
   );
 };
-// interface Props {
-//   posts: PostsOrPages | undefined;
-// }
-
-// const index: NextPage<Props> = (props) => {
-//   const { posts } = props;
-//   const [contents, setContents] = useState<ContentsInfo[]>([]);
-//   console.log(props.posts);
-//   useEffect(() => {
-//     if (contents.length === 0) {
-//       if (posts) {
-//         const contentsInfos: ContentsInfo[] = posts.map((data, index) => {
-//           return {
-//             uuid: data.uuid,
-//             title: data.title,
-//             excerpt: data.excerpt,
-//             blogId: data.slug,
-//           };
-//         });
-//         setContents(contentsInfos);
-//       }
-//     }
-//   }, []);
-//   return (
-//   );
-// };
 
 export default IndexPage;

@@ -15,7 +15,6 @@ const Hamburger: React.FC<Props> = ({ isOpen, onClick, className }) => {
         <div className="bar bar2" />
         <div className="bar bar3" />
       </S.Container>
-      {isOpen && <S.Slider />}
     </>
   );
 };

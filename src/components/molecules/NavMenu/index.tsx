@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import LinkedEl from 'src/components/molecules/LinkedEl';
 import * as S from './style';
@@ -8,13 +9,13 @@ interface Props {
 
 const NavMenu: React.FC<Props> = ({ className }) => {
   return (
-    <S.Conatainer className={className}>
+    <S.Container className={className}>
       <S.Menus>
-        <LinkedEl url={''}>Home</LinkedEl>
+        <Link href={'/'}>Home</Link>
         <LinkedEl url={''}>About</LinkedEl>
         <LinkedEl url={''}>Posts</LinkedEl>
       </S.Menus>
-    </S.Conatainer>
+    </S.Container>
   );
 };
 

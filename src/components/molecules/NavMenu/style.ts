@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Conatainer = styled.div`
+export const Container = styled.div`
   width: 300px;
   position: fixed;
   color: white;

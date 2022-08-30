@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const Grid = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Container = styled.div`
   padding: 11vw 92px;
   display: flex;

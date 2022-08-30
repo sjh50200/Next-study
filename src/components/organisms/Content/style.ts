@@ -6,6 +6,11 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   word-break: break-word;
+  :hover {
+    img {
+      opacity: 0.8;
+    }
+  }
 `;
 
 export const Image = styled.img`

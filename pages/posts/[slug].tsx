@@ -1,9 +1,10 @@
 import { PostOrPage, PostsOrPages } from '@tryghost/content-api';
 import { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 import React from 'react';
 import Header from 'src/components/organisms/Header';
 import Post from 'src/components/templates/post';
-import { getPosts, getSinglePost } from 'src/utils/api/ghostApi';
+import { getPosts, getSinglePost } from 'src/utils/api/posts';
 
 interface Props {
   post: PostOrPage | undefined;
@@ -34,7 +35,9 @@ export const getStaticPaths = async () => {
 
 const PostPage: NextPage<Props> = ({ post }) => {
   return post ? (
-    <Post header={<Header className="on-off" />} post={post} />
+    <>
+      <Post header={<Header className="on-off" />} post={post} />
+    </>
   ) : null;
 };
 

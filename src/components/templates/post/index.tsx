@@ -8,7 +8,7 @@ interface Props {
 
 const Post: FunctionComponent<Props> = ({ post, header }) => {
   return (
-    <>
+    <S.Grid>
       {header && header}
       <S.Container>
         <S.Title>{post.title}</S.Title>
@@ -18,7 +18,7 @@ const Post: FunctionComponent<Props> = ({ post, header }) => {
           ></S.ContentWrapper>
         </S.Content>
       </S.Container>
-    </>
+    </S.Grid>
   );
 };
 
