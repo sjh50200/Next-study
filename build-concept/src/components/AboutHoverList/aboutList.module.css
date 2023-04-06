@@ -1,0 +1,6 @@
+.about-list-container {
+  width: 5rem;
+  height: 5rem;
+  background-color: orange;
+  position: absolute;
+}
