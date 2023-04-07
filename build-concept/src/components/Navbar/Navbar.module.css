@@ -1,0 +1,39 @@
+.navbarContainer {
+  width: 100%;
+  height: 6rem;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbarItem {
+  color: white;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.navbarLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbarLink:visited {
+  color: inherit;
+}
+
+.navbarAbout {
+  position: relative;
+}

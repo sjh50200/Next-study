@@ -6,7 +6,7 @@ const AboutList = () => {
 };
 
 AboutList.getLayout = (page: ReactElement) => {
-  return <DefaultLayout>{page}</DefaultLayout>
-}
+  return <DefaultLayout>{page}</DefaultLayout>;
+};
 
 export default AboutList;
