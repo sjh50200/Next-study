@@ -3,6 +3,7 @@ import Link from 'next/link';
 import AboutHoverList from '@/components/AboutHoverList';
 
 const Navbar = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [aboutItemHover, setAboutItemHover] = useState<boolean>(false);
 
   return (
