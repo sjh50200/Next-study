@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import AboutHoverList from '@/components/AboutHoverList';
 
-const navbar = () => {
+const Navbar = () => {
   const [aboutItemHover, setAboutItemHover] = useState<boolean>(false);
 
   return (
@@ -21,9 +21,19 @@ const navbar = () => {
           about
           {aboutItemHover && <AboutHoverList />}
         </li>
+        <li className="navbar-item">
+          <Link className="navbar-link" href="/design-system">
+            Design-System
+          </Link>
+        </li>
+        <li className="navbar-item">
+          <Link className="navbar-link" href="/project2">
+            Project2
+          </Link>
+        </li>
       </ul>
     </nav>
   );
 };
 
-export default navbar;
+export default Navbar;

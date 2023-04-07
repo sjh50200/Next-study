@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 
-export default function Layout({ children }: { children: React.ReactElement }) {
+export const DefaultLayout = ({ children }: { children: React.ReactElement }) => {
   return (
     <>
       <Navbar />
@@ -9,3 +9,5 @@ export default function Layout({ children }: { children: React.ReactElement }) {
     </>
   );
 }
+
+export default DefaultLayout

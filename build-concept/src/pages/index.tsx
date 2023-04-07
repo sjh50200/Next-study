@@ -1,13 +1,13 @@
 import type { ReactElement } from 'react';
-import Layout from '@/components/Layout';
+import { DefaultLayout } from '@/components/templates/Default';
 import type { NextPageWithLayout } from '../pages/_app';
 
 const Page: NextPageWithLayout = () => {
   return <p>Main Page</p>;
 };
 
-Page.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
+Page.getLayout = (page: ReactElement) => {
+  return <DefaultLayout>{page}</DefaultLayout>;
 };
 
 export default Page;
