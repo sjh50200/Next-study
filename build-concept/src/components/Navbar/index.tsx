@@ -4,7 +4,6 @@ import AboutHoverList from '@/components/AboutHoverList';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [aboutItemHover, setAboutItemHover] = useState<boolean>(false);
 
   return (
