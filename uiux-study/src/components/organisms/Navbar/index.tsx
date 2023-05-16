@@ -1,10 +1,7 @@
-'use client';
-
 import React from 'react';
-import * as S from './style';
 
 const Navbar = () => {
-  return <S.NavbarContainer>Navbar</S.NavbarContainer>;
+  return <nav className="h-40 border-2 border-rose-600">Navbar</nav>;
 };
 
 export default Navbar;

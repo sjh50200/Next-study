@@ -1,17 +1,15 @@
+import './globals.css';
 import Navbar from '@/components/organisms/Navbar';
-import StyledComponentsRegistry from '@/lib/registry';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html>
+    <html lang="ko">
       <body>
         <Navbar />
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        {children}
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
